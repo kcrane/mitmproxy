@@ -23,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-node@v4
         with:
           node-version-file: .github/node-version.txt
@@ -31,4 +33,4 @@ jobs:
           python-version-file: .github/python-version.txt
       - run: ./release/release.py ${{ inputs.version }} ${{ inputs.skip-branch-status-check }}
         env:
-          abc: def # this token works with the GraphQL API
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
