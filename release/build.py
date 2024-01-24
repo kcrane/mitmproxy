@@ -104,6 +104,10 @@ def operating_system() -> str:
             machine = "x86_64"
         case "arm64":
             machine = "arm64"
+        case "s390x":
+            machine = "s390x"
+        case "ppc64le":
+            machine = "ppc64le"
         case other:
             warnings.warn("Unexpected platform.")
             machine = other
