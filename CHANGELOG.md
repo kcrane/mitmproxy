@@ -9,6 +9,10 @@
 
 
 
+## 24 January 2024: mitmproxy 6.6.6
+
+
+
 ## 24 January 2024: mitmproxy 5.5.5
 
 * Fix a regression where `allow_hosts`/`ignore_hosts` would break with IPv6 connections.
